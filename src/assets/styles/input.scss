@@ -1,0 +1,20 @@
+.input {
+  border: 1px solid rgba(white, 0.3);
+
+  border-radius: 8px;
+  padding: 10px 12px;
+  box-sizing: border-box;
+
+  outline: none;
+
+  background: #09090b;
+  color: white;
+
+  &:focus {
+    border: 1px solid #3b82f6 !important;
+
+    // ring 2
+    box-shadow: 0 0 0 3px rgba(#3b82f6, 0.1);
+    transition: all 0.2s;
+  }
+}

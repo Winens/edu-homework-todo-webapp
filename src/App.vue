@@ -1,30 +1,30 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import InitialSetup from "./components/InitialSetup.vue";
+import TodoApp from "./components/TodoApp.vue";
+
+const username = localStorage.getItem("username");
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <InitialSetup v-if="!username" />
+  <TodoApp v-else />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+<style lang="scss">
+.app-container {
+  max-width: 768px;
+  margin: 16px auto;
+  padding: 16px 32px;
+  position: relative;
+
+  background: rgba(#09090b, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(#000, 0.2);
+  height: calc(100vh - 16 * 4px - 4px);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 2px solid rgba(#fff, 0.1);
 }
 </style>

@@ -1,0 +1,26 @@
+$primary-color: #3b82f6;
+
+.btn {
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  outline: none;
+
+  font-weight: 600;
+
+  background-color: $primary-color;
+  color: white;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: scale(0.95);
+    transition: transform 0.2s;
+  }
+}

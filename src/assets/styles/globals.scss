@@ -1,0 +1,43 @@
+@import "button.scss";
+@import "input.scss";
+
+$link-color: #3b82f6;
+
+:root {
+  font-family: "Inter", system-ui, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color: #f4f4f5;
+  background-color: #09090b;
+
+  background-image: url("/img/pattern2.png");
+  background-size: 260px;
+  background-repeat: repeat;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enable variable font if browser supports it. */
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "InterVariable", system-ui, Helvetica, Arial, sans-serif;
+    font-optical-sizing: auto;
+  }
+}
+
+a {
+  color: $link-color;
+  text-decoration: inherit;
+}
+a:hover {
+  color: darken($link-color, 10%);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(white, 0.1);
+}
