@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@remixicon/vue": "^4.2.0",
+    "dayjs": "^1.11.11",
     "nanoid": "^5.0.7",
     "normalize.css": "^8.0.1",
     "pinia": "^2.1.7",

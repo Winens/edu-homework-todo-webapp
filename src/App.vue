@@ -17,6 +17,23 @@ const username = localStorage.getItem("username");
   padding: 16px 32px;
   position: relative;
 
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
   background: rgba(#09090b, 0.9);
   border-radius: 16px;
   box-shadow: 0 0 10px rgba(#000, 0.2);
