@@ -160,9 +160,9 @@ const handleStar = (id: string) => {
                   : state.openedTodos.push(todo.id)
               "
             >
-              <span>
+              <p style="margin: 0">
                 {{ todo.text }}
-              </span>
+              </p>
             </div>
           </div>
 
@@ -176,7 +176,17 @@ const handleStar = (id: string) => {
               <RiStarLine v-else size="21" />
             </button>
 
-            <button class="btn-dropdown">
+            <button
+              class="btn-dropdown"
+              @click="
+                state.openedTodos.includes(todo.id)
+                  ? state.openedTodos.splice(
+                      state.openedTodos.indexOf(todo.id),
+                      1
+                    )
+                  : state.openedTodos.push(todo.id)
+              "
+            >
               <RiArrowDownSLine
                 v-if="!state.openedTodos.includes(todo.id)"
                 size="21"

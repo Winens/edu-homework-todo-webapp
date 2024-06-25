@@ -10,8 +10,8 @@ const handleSave = () => {
 </script>
 
 <template>
-  <div class="vcenter">
-    <div class="app-container" style="margin-bottom: 120px">
+  <div class="center">
+    <div class="app-container section-box">
       <h1>İsminizi Giriniz:</h1>
 
       <input
@@ -19,6 +19,7 @@ const handleSave = () => {
         type="text"
         placeholder="İsminizi Giriniz"
         class="input"
+        style="width: 100%; display: block"
       />
 
       <button
@@ -33,7 +34,17 @@ const handleSave = () => {
 </template>
 
 <style scoped>
-.vcenter {
+.section-box {
+  /* margin-bottom: 120px; */
+  padding-bottom: 32px !important;
+  max-width: 320px;
+  flex-shrink: 0;
+  width: 100%;
+  height: max-content;
+  /* margin: 0 auto; */
+}
+
+.center {
   display: flex;
   justify-content: center;
   align-items: center;

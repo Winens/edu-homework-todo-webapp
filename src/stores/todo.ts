@@ -16,10 +16,31 @@ export const useTodoStore = defineStore("todos", {
     return {
       todos: [
         {
-          id: "initial",
-          text: "Tutorial: Tamamlamak için tıkla!",
+          id: "initial__todo__1",
+          text: "Tutorial (1): Açıklamayı görmek ve düzenlemek için tıklayınız.",
           description:
-            "Bu bir örnek görevdir. Görevi tamamlamak için üzerine tıklayın.",
+            "Bu bir örnek görevdir. Görevi tamamlamak için soldaki kutucuğa tıklayınız.\n" +
+            "NOT: Her değişiklik anlık olarak otomatik kaydedilir.",
+          done: false,
+          lastUpdated: dayjs().toISOString(),
+          createdAt: dayjs().toISOString(),
+          starred: false,
+        },
+
+        {
+          id: "initial__todo__2",
+          text: "Tutorial (2): Silmek için sağ köşedeki çöp kutusuna tıklayınız.",
+          description: "",
+          done: false,
+          lastUpdated: dayjs().toISOString(),
+          createdAt: dayjs().toISOString(),
+          starred: false,
+        },
+
+        {
+          id: "initial__todo__3",
+          text: "Tutorial (3): Tamamlamak için soldaki kutucuğa tıklayınız.",
+          description: "",
           done: false,
           lastUpdated: dayjs().toISOString(),
           createdAt: dayjs().toISOString(),
